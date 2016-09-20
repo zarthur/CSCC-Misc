@@ -89,5 +89,5 @@ prompted, enter your name and email address - these will be used to associate
 changes with you.  In the team explorer window, type a commit message 
 describing your changes, click the drop-down arrow next to commit, and select 
 **Commit All and Push**.  Your new project should be visible on GitHub.  As we 
-make changes, we can commit and push the, using the changes view in team 
+make changes, we can commit and push them, using the changes view in team 
 explorer.    
