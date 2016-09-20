@@ -30,7 +30,7 @@ repository.  As we edit files, add new code or change existing code, we are
 working in the **working directory**.  At some point, we'll have implemented a 
 set of changes to our code, whether we're fixing a bug or have made significant 
 progress toward implementing a new feature, that we'd like to preserve the code 
-in it's current state so we can examine it again later if necessary.  When we 
+in its current state so we can examine it again later if necessary.  When we 
 do this, we can check the code into the **repository**, an archive of versions 
 of files.  We can easily review the history of our files in the repository and 
 move between versions.
@@ -91,3 +91,9 @@ describing your changes, click the drop-down arrow next to commit, and select
 **Commit All and Push**.  Your new project should be visible on GitHub.  As we 
 make changes, we can commit and push them, using the changes view in team 
 explorer.    
+
+## Images
+The git workflow is copied from 
+https://git-scm.com/book/en/v2/book/01-introduction/images/areas.png and 
+licensed under a creative commons license,  
+https://creativecommons.org/licenses/by/3.0/.
