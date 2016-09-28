@@ -238,22 +238,43 @@ open a pull request to incorporate changes form the fork into the original
 an let the maintainers of the original repo work out the merge details
 
 Typically, we'll choose the first option.  So let's switch the base so that
-the base fork is the fork repo and the head fork is the original repo.  Create
-the pull request. Unfortunately, we cannot merge the pull request from the
-GitHub website.  Instead we'll have to rely on the command line or the GitHub
-desktop app.
+the base fork is the fork repo and the head fork is the original repo.  If, 
+while switching the base and head, the option to select different repositories 
+disappears, click the **Comapre across forks** link. Create the pull request. 
+Unfortunately, we cannot merge the pull request from the GitHub website. 
+Instead we'll have to rely on the command line or the GitHub desktop app.
 
-When we view the repository in the desktop app, we can view the pull request
-by selecting the branch corresponding to the pull request. Once the branch is
-selected, we can choose **Update from master** and **View Conflicts**.  Right-
-click on the file with conflicts and select "Open file".  In the editor make
-any necessary changes and save the file. Now we can commit from GitHub Desktop.
+When viewing the details of the the newly created pull request, click the 
+**open this in GitHub Desktop** link. When we view the repository in the 
+desktop app, we should see something similar to the following:
 
-We can now merge our changes back into the master branch of the fork repository
-by first selecting the pull request branch in GitHub Desktop and creating a new
-pull request.  Next, we'll merge this on the GitHub website. Notice that the
-original pull request now indicates that it has been merged.  This has
-reconciled the differences between the original repository and the fork
-repository.  We still have to create a pull request to get the changes from the
-fork into the original.
+![update](images/update-master.png)
 
+At creation, this pull request included changes from the original repository. 
+To include changes in the fork, select **master** from the In the drop-down, 
+then click **Update from master** and **View Conflicts**. Right-click on the 
+file with conflicts and select "Open file". In the editor make any necessary 
+changes and save the file. Next, make sure the check-box next to the file is 
+selected and click **Commit to pr/1** (pr/1 might appear with some other number 
+where the number corresponds to the pull request number) under the file list. 
+This will resolve the merge conflict for the pull request.
+
+Now we need to incorporate the merged pull request into the fork itself.  Near 
+the top of the GitHub Desktop window, click the drop-down menu that currently 
+displays **pr/1** (or the corresponding number of the pull request) and select 
+**master**.
+
+![master](images/change-branch.png)
+
+Next, click the **Compare** button and select the pull request.
+
+![pull request](images/compare-branch.png)
+
+Click the **Update from pr/1** button.  Finally, click the **Sync** button. On 
+the GitHub website, we can now see that the pull request has been merged.  
+
+This resolved the conflict by bringing the new code from the original 
+repository into the fork. We can now merge our changes back into the original 
+repository by creating a pull request from the fork.  Because the fork 
+includes a resolution for the merge conflict, the new pull request should be 
+able to be merged automatically.
