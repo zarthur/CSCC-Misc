@@ -9,5 +9,5 @@ A collection of miscellaneous CSCC-related material
 - [Jypter Notebook](BI-Intro/BI-Analytics.ipynb)
 
 ## HTML/CSS Validator
-- [Validator Documentation](HTML-Validator/readme.md)
+- [Validator Documentation](HTML-Validator)
 
