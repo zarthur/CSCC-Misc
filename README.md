@@ -6,7 +6,7 @@ A collection of miscellaneous CSCC-related material
 - [Part 2 - A overview of collaboration using GitHub and Visual Studio](Git-GitHub-VS/part-2.md)
 
 ## Introduction to Business Intelligence
-- [Jypter Notebook](BI-Intro/BI-Analytics.ipynb]
+- [Jypter Notebook](BI-Intro/BI-Analytics.ipynb)
 
 ## HTML/CSS Validator
 - [Validator Documentation](HTML-Validator/readme.md)
