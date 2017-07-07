@@ -3,7 +3,6 @@
 import json
 import sys
 
-from pprint import PrettyPrinter
 from typing import List
 from urllib.parse import urljoin
 
@@ -37,7 +36,6 @@ class Validator:
                 self.errors['css'][url] = []
 
     def print_errors(self) -> None:
-        printer = PrettyPrinter(indent=4)
         html_errors = 0
         for (page, errors) in self.errors['html'].items():
             html_errors += len(errors)
@@ -49,7 +47,7 @@ class Validator:
         print("HTML\n####")
         print(json.dumps(self.errors['html'], indent=4))
         print("###\nCSS\n###")
-        printer.pprint(self.errors['css'])
+        print(json.dumps(self.errors['css'], indent=4))
         print("#######\nSUMMARY\n#######")
         print("HTML: {0}, CSS: {1}".format(html_errors, css_errors))
 
@@ -71,7 +69,7 @@ class Validator:
         results = []
         for error in soup.find_all("td", class_="parse-error"):
             error_text, *_ = error.contents
-            results.append(error_text.strip())
+            results.append(" ".join(error_text.strip().split()))
         return results
 
     @staticmethod
