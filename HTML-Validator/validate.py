@@ -87,10 +87,10 @@ class Validator:
     def _extract_links(url: str) -> List:
         soup = Validator._load_page(url)
         base_url, *_ = url.rsplit('/', 1)
+        base_url += "/"
         urls = []
         for link in soup.find_all('a', href=True):
             href = link['href']
-            print(href, base_url)
             if href.startswith(base_url):
                 urls.append(href)
             if not href.startswith("http") and not href.startswith(".."):
